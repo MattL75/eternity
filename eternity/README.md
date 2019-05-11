@@ -2,26 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Install [Node.js and npm](https://nodejs.org/en/download/).
+2. Install the Angular CLI by running `npm install -g @angular/cli`.
+3. Navigate to the repository and enter the eternity directory.
+4. Run `npm install`.
+5. Run `ng serve` or `npm start`.
+6. Visit `localhost:4200`.
 
-## Code scaffolding
+Port is subject to change for backend compatibility.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Using the CLI
 
-## Build
+You can use the Angular CLI to generate useful files and folders. For instance, to generate a component, you could write `ng generate component [componentName]` or use the shorthand notation `ng g c [componentName]`. You can use this feature for directives, pipes, services, classes, guards, interfaces, enums and modules.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Building the Application
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng build --prod` to build the application.
