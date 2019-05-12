@@ -1,0 +1,61 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    color: var(--text-main);
+}
+
+.et-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 56px;
+    color: var(--text-primary);
+    background-color: var(--primary);
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-item {
+    flex: 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+
+    &-container {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        margin: 6px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &-btn {
+        background-color: var(--primary);
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/deep/ .mat-figure {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}

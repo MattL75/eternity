@@ -1,0 +1,27 @@
+<mat-toolbar class="et-toolbar">
+    <div>
+        Eternity
+    </div>
+    <div>
+        <button mat-icon-button
+                [matMenuTriggerFor]="menu"
+                [attr.aria-label]="'themeSelection' | translate:lang">
+            <mat-icon>format_color_fill</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <mat-grid-list cols="2">
+                <mat-grid-tile *ngFor="let theme of availableThemes"
+                               [class]="theme"
+                               style="position: absolute">
+                    <div mat-menu-item class="menu-item">
+                        <div class="menu-item-container">
+                            <div role="button" [attr.aria-label]="theme"
+                                    class="menu-item-btn" (click)="activeTheme = theme">
+                            </div>
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-menu>
+    </div>
+</mat-toolbar>
