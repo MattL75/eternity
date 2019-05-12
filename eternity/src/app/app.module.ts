@@ -3,7 +3,14 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatButtonModule, MatGridListModule, MatIconModule, MatMenuModule, MatToolbarModule} from "@angular/material";
+import {
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatTooltipModule
+} from "@angular/material";
 import {L10nConfig, L10nLoader, LogLevel, ProviderType, StorageStrategy, TranslationModule} from "angular-l10n";
 import {HttpClientModule} from "@angular/common/http";
 
@@ -42,7 +49,8 @@ const l10nConfig: L10nConfig = {
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
-        MatGridListModule
+        MatGridListModule,
+        MatTooltipModule
     ],
     providers: [],
     bootstrap: [AppComponent]

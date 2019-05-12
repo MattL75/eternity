@@ -6,6 +6,11 @@ const THEMES: string[] = [
     'material-dark'
 ];
 
+const LANGS: string[] = [
+    'en',
+    'fr'
+];
+
 @Component({
     selector: 'et-root',
     templateUrl: './app.component.html',
@@ -20,6 +25,8 @@ export class AppComponent implements OnInit, OnDestroy {
     activeTheme: string = 'material-light';
     
     availableThemes: string[] = THEMES;
+
+    availableLangs: string[] = LANGS;
 
     constructor(public locale: LocaleService) { }
 
