@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
-    MatButtonModule,
+    MatButtonModule, MatCardModule,
     MatGridListModule,
     MatIconModule,
     MatMenuModule,
@@ -13,6 +13,8 @@ import {
 } from "@angular/material";
 import {L10nConfig, L10nLoader, LogLevel, ProviderType, StorageStrategy, TranslationModule} from "angular-l10n";
 import {HttpClientModule} from "@angular/common/http";
+import { CalculatorComponent } from './calculator/calculator.component';
+import { FormsModule } from '@angular/forms';
 
 const l10nConfig: L10nConfig = {
     logger: {
@@ -38,19 +40,22 @@ const l10nConfig: L10nConfig = {
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        CalculatorComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        FormsModule,
         TranslationModule.forRoot(l10nConfig),
         MatToolbarModule,
         MatMenuModule,
         MatButtonModule,
         MatIconModule,
         MatGridListModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatCardModule
     ],
     providers: [],
     bootstrap: [AppComponent]

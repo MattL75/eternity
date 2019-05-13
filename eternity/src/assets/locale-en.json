@@ -1,4 +1,6 @@
 {
     "themeSelection": "Select a theme",
-    "languageSelection": "Select a language"
+    "languageSelection": "Select a language",
+    "scientificCalculator": "Scientific Calculator",
+    "inputEquation": "Equation input"
 }
