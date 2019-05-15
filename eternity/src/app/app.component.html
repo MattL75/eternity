@@ -18,6 +18,8 @@
                         <div class="menu-item-container">
                             <div role="button" [attr.aria-label]="theme"
                                     class="menu-item-btn" (click)="activeTheme = theme">
+                                <mat-icon *ngIf="activeTheme === theme"
+                                          class="menu-item-btn-check">check</mat-icon>
                             </div>
                         </div>
                     </div>

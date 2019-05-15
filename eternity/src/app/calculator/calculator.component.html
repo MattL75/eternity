@@ -3,10 +3,30 @@
         <mat-card-title>{{'scientificCalculator' | translate:lang}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <span class="et-main-card-input-container" tabindex="0">
+        <span class="et-main-card-input-container">
             <input class="et-main-card-input"
                    type="text"
+                   [(ngModel)]="equation"
                    [attr.aria-label]="'inputEquation' | translate:lang"/>
         </span>
+        <div class="et-calculator">
+            <table>
+                <tr>
+                    <td *ngFor="let number of [7, 8, 9]">
+                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">{{number}}</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let number of [4, 5, 6]">
+                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">{{number}}</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td *ngFor="let number of [1, 2, 3]">
+                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">{{number}}</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </mat-card-content>
 </mat-card>
