@@ -20,7 +20,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         this.equation += button;
     }
 
-    @HostListener('keydown', ['$event'])
+    @HostListener('document:keydown', ['$event'])
     keydownListener(event: KeyboardEvent): void {
         if (event.key === 'Backspace' && this.equation && this.equation.length > 0) {
             this.equation = this.equation.slice(0, -1);
