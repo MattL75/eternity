@@ -12,12 +12,6 @@ export class CalculatorComponent implements OnInit, OnDestroy {
 
     public equation: string = '';
 
-    public calculatorRows = [
-        {},
-    ];
-
-    // NAH. MAKE AN ARRAY 9 to 1 for numbers.
-
     ngOnInit() {}
 
     ngOnDestroy() {}
