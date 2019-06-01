@@ -8,9 +8,9 @@ const THEMES: string[] = [
     'beach-day'
 ];
 
-const LANGS: string[] = [
-    'en',
-    'fr'
+const LANGS: any[] = [
+    {short: 'en', long: 'English'},
+    {short: 'fr', long: 'Français'}
 ];
 
 @Component({
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
     
     availableThemes: string[] = THEMES;
 
-    availableLangs: string[] = LANGS;
+    availableLangs: any[] = LANGS;
 
     constructor(public locale: LocaleService) { }
 
