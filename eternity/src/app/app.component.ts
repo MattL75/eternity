@@ -3,7 +3,9 @@ import {Language, LocaleService} from 'angular-l10n';
 
 const THEMES: string[] = [
     'material-light',
-    'material-dark'
+    'material-dark',
+    'high-contrast',
+    'beach-day'
 ];
 
 const LANGS: string[] = [

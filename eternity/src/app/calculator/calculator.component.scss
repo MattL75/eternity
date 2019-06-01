@@ -20,7 +20,7 @@
         border: none;
         transition: all 0.125s ease-in-out;
         background-color: var(--background-darker);
-        color: var(--text-main);
+        color: var(--text-button);
         padding: 8px;
         border-radius: 4px;
 
@@ -54,6 +54,6 @@
     &-main-btn {
         width: 100%;
         background-color: var(--background-darker);
-        color: var(--text-main);
+        color: var(--text-button);
     }
 }

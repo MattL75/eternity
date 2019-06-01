@@ -14,7 +14,7 @@
                 <mat-grid-tile *ngFor="let theme of availableThemes"
                                [class]="theme"
                                style="position: absolute">
-                    <div mat-menu-item class="menu-item">
+                    <div mat-menu-item class="menu-item" [matTooltip]="theme | theme">
                         <div class="menu-item-container">
                             <div role="button" [attr.aria-label]="theme"
                                     class="menu-item-btn" (click)="activeTheme = theme">
