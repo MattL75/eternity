@@ -1,40 +1,47 @@
 import * as math from 'mathjs';
+import { sin } from '../functions/sin';
+import { cos } from '../functions/cos';
 
 export class Calculator {
 
-    private parser = math.parser();
+    private _parser = math.parser();
+    private _rounds: number;
+    private _precision: number;
 
-    constructor() {
+    constructor(rounds: number = 20, precision: number = 3) {
+        this._rounds = rounds;
+        this._precision = precision;
         this.initializeCustomOperations();
     }
 
-    static squareRoot(val: number): number {
-        return val;
+    public evaluate(equation: string): number {
+        return Number(this._parser.eval(equation).toFixed(this._precision));
     }
 
-    static sin(val: number): number {
-        return val;
+    public setRounds(rounds: number): void {
+        this._rounds = rounds;
     }
 
-    static cos(val: number): number {
-        return val;
+    public setPrecision(precision: number): void {
+        this._precision = precision;
     }
 
     private initializeCustomOperations(): void {
 
         // Square root custom function
-        this.parser.set('sqrt', (val) => {
-            return Calculator.squareRoot(val);
+        this._parser.set('sqrt', (val) => {
+            // TODO
+            return sin(val);
         });
 
         // Sin custom function
-        this.parser.set('sin', (val) => {
-            return Calculator.sin(val);
+        this._parser.set('sin', (val) => {
+            return sin(val, this._rounds).toNumber();
         });
 
         // Cos custom function
-        this.parser.set('cos', (val) => {
-            return Calculator.sin(val);
+        this._parser.set('cos', (val) => {
+            return cos(val, this._rounds);
         });
     }
 

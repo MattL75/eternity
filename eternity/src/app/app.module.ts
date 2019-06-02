@@ -7,7 +7,7 @@ import {
     MatButtonModule, MatCardModule,
     MatGridListModule,
     MatIconModule,
-    MatMenuModule,
+    MatMenuModule, MatSnackBarModule,
     MatToolbarModule,
     MatTooltipModule
 } from "@angular/material";
@@ -57,7 +57,8 @@ const l10nConfig: L10nConfig = {
         MatIconModule,
         MatGridListModule,
         MatTooltipModule,
-        MatCardModule
+        MatCardModule,
+        MatSnackBarModule
     ],
     providers: [],
     bootstrap: [AppComponent]
