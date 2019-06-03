@@ -17,6 +17,10 @@ Port is subject to change for backend compatibility.
 
 You can use the Angular CLI to generate useful files and folders. For instance, to generate a component, you could write `ng generate component [componentName]` or use the shorthand notation `ng g c [componentName]`. You can use this feature for directives, pipes, services, classes, guards, interfaces, enums and modules.
 
-## Building the Application
+## Building
 
 Run `ng build --prod` to build the application.
+
+## Deploying
+
+Run `npm run deploy` to deploy the application to the Github pages site.
