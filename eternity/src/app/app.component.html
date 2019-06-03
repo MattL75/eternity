@@ -14,7 +14,7 @@
                 <mat-grid-tile *ngFor="let theme of availableThemes"
                                [class]="theme"
                                style="position: absolute">
-                    <div mat-menu-item class="menu-item">
+                    <div mat-menu-item class="menu-item" [matTooltip]="theme | theme">
                         <div class="menu-item-container">
                             <div role="button" [attr.aria-label]="theme"
                                     class="menu-item-btn" (click)="activeTheme = theme">
@@ -34,9 +34,9 @@
         </button>
         <mat-menu #langMenu="matMenu" [class]="activeTheme">
             <ng-container *ngFor="let localLang of availableLangs">
-                <button mat-menu-item *ngIf="localLang !== lang"
-                        (click)="selectLanguage(localLang)">
-                    {{localLang | titlecase}}
+                <button mat-menu-item *ngIf="localLang.short !== lang"
+                        (click)="selectLanguage(localLang.short)">
+                    {{localLang.long}}
                 </button>
             </ng-container>
         </mat-menu>

@@ -7,7 +7,7 @@ import {
     MatButtonModule, MatCardModule,
     MatGridListModule,
     MatIconModule,
-    MatMenuModule,
+    MatMenuModule, MatSnackBarModule,
     MatToolbarModule,
     MatTooltipModule
 } from "@angular/material";
@@ -15,6 +15,7 @@ import {L10nConfig, L10nLoader, LogLevel, ProviderType, StorageStrategy, Transla
 import {HttpClientModule} from "@angular/common/http";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
+import { ThemePipe } from './pipes/theme.pipe';
 
 const l10nConfig: L10nConfig = {
     logger: {
@@ -41,7 +42,8 @@ const l10nConfig: L10nConfig = {
 @NgModule({
     declarations: [
         AppComponent,
-        CalculatorComponent
+        CalculatorComponent,
+        ThemePipe
     ],
     imports: [
         BrowserModule,
@@ -55,7 +57,8 @@ const l10nConfig: L10nConfig = {
         MatIconModule,
         MatGridListModule,
         MatTooltipModule,
-        MatCardModule
+        MatCardModule,
+        MatSnackBarModule
     ],
     providers: [],
     bootstrap: [AppComponent]

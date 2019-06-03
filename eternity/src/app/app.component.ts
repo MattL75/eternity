@@ -3,12 +3,14 @@ import {Language, LocaleService} from 'angular-l10n';
 
 const THEMES: string[] = [
     'material-light',
-    'material-dark'
+    'material-dark',
+    'high-contrast',
+    'beach-day'
 ];
 
-const LANGS: string[] = [
-    'en',
-    'fr'
+const LANGS: any[] = [
+    {short: 'en', long: 'English'},
+    {short: 'fr', long: 'Français'}
 ];
 
 @Component({
@@ -26,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
     
     availableThemes: string[] = THEMES;
 
-    availableLangs: string[] = LANGS;
+    availableLangs: any[] = LANGS;
 
     constructor(public locale: LocaleService) { }
 

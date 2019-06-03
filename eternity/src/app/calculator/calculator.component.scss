@@ -8,6 +8,7 @@
     margin: 0 auto;
     background-color: var(--menu-bg);
     color: var(--text-main);
+    width: 80%;
 
     &-input-container {
         flex-grow: 1;
@@ -20,9 +21,10 @@
         border: none;
         transition: all 0.125s ease-in-out;
         background-color: var(--background-darker);
-        color: var(--text-main);
+        color: var(--text-button);
         padding: 8px;
         border-radius: 4px;
+        width: 100%;
 
         &:focus {
             outline: none;
@@ -32,6 +34,9 @@
 }
 
 .et-calculator {
+
+    display: flex;
+    flex-wrap: wrap;
 
     table {
         width: 100%;
@@ -54,6 +59,37 @@
     &-main-btn {
         width: 100%;
         background-color: var(--background-darker);
-        color: var(--text-main);
+        color: var(--text-button);
+        font-size: 1.15rem;
+    }
+
+    .equals-button {
+
+        // TODO maybe this?
+        //background-color: var(--primary);
+        //color: var(--text-primary);
+        font-size: 1.5rem;
+    }
+
+    .larger {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .et-main-card {
+        width: 680px;
+    }
+
+    .et-calculator {
+        flex-wrap: nowrap;
+
+        table {
+            width: calc(50% - 2px);
+        }
+    }
+
+    #symbols-table {
+        margin-left: 4px;
     }
 }
