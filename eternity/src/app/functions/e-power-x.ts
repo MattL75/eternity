@@ -2,13 +2,16 @@ import { power } from './power';
 import { factorial } from './factorial';
 import BigNumber from 'bignumber.js';
 
-export function ePowerX(val: number, rounds: number = 20): BigNumber {
-    let retained = new BigNumber(1 + val);
-    let nominator: BigNumber, denominator: BigNumber;
-    for (let i = 0; i < rounds; ++i) {
-        nominator = power(val, i + 2);
-        denominator = factorial(i + 2);
+export function ePowerX(val: number, rounds: number = 40): BigNumber {
+    let retained = new BigNumber(1);
+    let nominator: BigNumber;
+    let denominator: BigNumber;
+
+    for (let i = 1; i < rounds; ++i) {
+        nominator = power(val, i);
+        denominator = factorial(i);
         retained = retained.plus(nominator.dividedBy(denominator));
     }
+
     return retained;
 }

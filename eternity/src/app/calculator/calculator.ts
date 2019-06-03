@@ -1,47 +1,59 @@
 import * as math from 'mathjs';
 import { sin } from '../functions/sin';
 import { cos } from '../functions/cos';
+import { ePowerX } from '../functions/e-power-x';
+import { abs } from '../functions/abs';
+import { sqrt } from '../functions/sqrt';
 
 export class Calculator {
 
-    private _parser = math.parser();
-    private _rounds: number;
-    private _precision: number;
+    private parser = math.parser();
+    private rounds: number;
+    private precision: number;
 
-    constructor(rounds: number = 20, precision: number = 3) {
-        this._rounds = rounds;
-        this._precision = precision;
+    constructor(rounds: number = 40, precision: number = 3) {
+        this.rounds = rounds;
+        this.precision = precision;
         this.initializeCustomOperations();
     }
 
     public evaluate(equation: string): number {
-        return Number(this._parser.eval(equation).toFixed(this._precision));
+        return Number(this.parser.eval(equation).toFixed(this.precision));
     }
 
     public setRounds(rounds: number): void {
-        this._rounds = rounds;
+        this.rounds = rounds;
     }
 
     public setPrecision(precision: number): void {
-        this._precision = precision;
+        this.precision = precision;
     }
 
     private initializeCustomOperations(): void {
 
         // Square root custom function
-        this._parser.set('sqrt', (val) => {
-            // TODO
-            return sin(val);
+        this.parser.set('sqrt', (val) => {
+            return sqrt(val, val / 2);
         });
 
         // Sin custom function
-        this._parser.set('sin', (val) => {
-            return sin(val, this._rounds).toNumber();
+        this.parser.set('sin', (val) => {
+            return sin(val, this.rounds).toNumber();
         });
 
         // Cos custom function
-        this._parser.set('cos', (val) => {
-            return cos(val, this._rounds);
+        this.parser.set('cos', (val) => {
+            return cos(val, this.rounds).toNumber();
+        });
+
+        // ePowerX custom function
+        this.parser.set('ePower', (val) => {
+            return ePowerX(val, this.rounds).toNumber();
+        });
+
+        // Absolute value custom function
+        this.parser.set('abs', (val) => {
+            return abs(val);
         });
     }
 

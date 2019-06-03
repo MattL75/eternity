@@ -33,7 +33,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
         try {
             const result = this.calculator.evaluate(this.equation);
             this.equation = '= ' + result;
-        } catch(e) {
+        } catch (e) {
             this.snackbar.open('Invalid equation.', 'Dismiss', {
                 duration: 5000
             });
@@ -50,22 +50,20 @@ export class CalculatorComponent implements OnInit, OnDestroy {
                 break;
             }
             case('Enter'): {
-                if (this.equation && this.equation.length) {
+                if (this.equation && this.equation.length && !this.isContextButtonFocused()) {
                     this.evaluate();
                 }
                 break;
-            }
-            default: {
-                const match = event.key.match(/[0-9a-zA-Z]/);
-                if (match && event.key.length === 1 && !this.isInputFocused()) {
-                    this.pressButton(event.key);
-                }
             }
         }
     }
 
     private isInputFocused(): boolean {
         return this.inputElement.nativeElement as HTMLElement === document.activeElement;
+    }
+
+    private isContextButtonFocused(): boolean {
+        return document.activeElement.classList.contains('et-calculator-main-btn');
     }
 
 }
