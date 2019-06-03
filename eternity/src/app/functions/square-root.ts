@@ -1,4 +1,4 @@
-export function squareRoot(x: number, x0: number) {
+export function squareRoot(x: number, x0: number): number {
     let x1 = (x0 + (x / x0)) / 2.0;
 
     if (Math.abs(x1 - x0) < Number.EPSILON) {
