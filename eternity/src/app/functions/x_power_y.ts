@@ -1,6 +1,13 @@
 import BigNumber from 'bignumber.js';
 import {ePowerX} from "./e-power-x";
 
+/*
+
+This function calculates x^y for x & y > 0 using the natural log (ln) series as follows:
+
+ln(x) = 2[ ((x - 1) / (x + 1)) + (((x - 1) / (x + 1)) ^ 3) / 3 + (((x - 1) / (x + 1)) ^ 5) / 5 + ...]
+ */
+
 export function xPowerY(x: number, y: number) : BigNumber{
     return ePowerX(y * ln(x));
 }
