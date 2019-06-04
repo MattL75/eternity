@@ -1,15 +1,15 @@
 import BigNumber from 'bignumber.js';
 import {ePowerX} from "./e-power-x";
 
-export function xPowerY(x, y) : BigNumber{
+export function xPowerY(x: number, y: number) : BigNumber{
     return ePowerX(y * ln(x));
 }
 
 export function ln(x: number){
     let sum = new BigNumber(0.0);
 
-    for(let i = 1; i <= 1000; i++){
-        if (i % 2 == 0){
+    for(let i = 1; i <= 10000; i++){
+        if (i % 2 == 1){
             sum = sum.plus((1.0/i) * pow(x, i));
         }
     }
