@@ -4,6 +4,8 @@ import { cos } from '../functions/cos';
 import { ePowerX } from '../functions/e-power-x';
 import { abs } from '../functions/abs';
 import { sqrt } from '../functions/sqrt';
+import { floor } from '../functions/floor';
+import { tenPowerX } from '../functions/ten-power-x';
 
 export class Calculator {
 
@@ -54,6 +56,16 @@ export class Calculator {
         // Absolute value custom function
         this.parser.set('abs', (val) => {
             return abs(val);
+        });
+
+        // Floor custom function
+        this.parser.set('floor', (val) => {
+            return floor(val);
+        });
+
+        // tenPowerX custom function
+        this.parser.set('tenPower', (val) => {
+            return tenPowerX(val);
         });
     }
 
