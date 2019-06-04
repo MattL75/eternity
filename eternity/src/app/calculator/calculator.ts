@@ -6,16 +6,19 @@ import { abs } from '../functions/abs';
 import { sqrt } from '../functions/sqrt';
 import { floor } from '../functions/floor';
 import { tenPowerX } from '../functions/ten-power-x';
+import { PI } from '../functions/pi';
 
 export class Calculator {
 
     private parser = math.parser();
     private rounds: number;
     private precision: number;
+    private mode: 'Deg' | 'Rad';
 
-    constructor(rounds: number = 40, precision: number = 3) {
+    constructor(rounds: number = 40, precision: number = 3, mode: 'Deg' | 'Rad' = 'Deg') {
         this.rounds = rounds;
         this.precision = precision;
+        this.mode = mode;
         this.initializeCustomOperations();
     }
 
@@ -31,6 +34,14 @@ export class Calculator {
         this.precision = precision;
     }
 
+    public setMode(mode: 'Deg' | 'Rad'): void {
+        this.mode = mode;
+    }
+
+    public get modeStr(): string {
+        return this.mode;
+    }
+
     private initializeCustomOperations(): void {
 
         // Square root custom function
@@ -40,12 +51,12 @@ export class Calculator {
 
         // Sin custom function
         this.parser.set('sin', (val) => {
-            return sin(val, this.rounds).toNumber();
+            return sin(val, this.rounds, this.mode).toNumber();
         });
 
         // Cos custom function
         this.parser.set('cos', (val) => {
-            return cos(val, this.rounds).toNumber();
+            return cos(val, this.rounds, this.mode).toNumber();
         });
 
         // ePowerX custom function
@@ -67,6 +78,9 @@ export class Calculator {
         this.parser.set('tenPower', (val) => {
             return tenPowerX(val);
         });
+
+        // Custom PI symbol
+        this.parser.set('π', PI);
     }
 
 }
