@@ -4,6 +4,7 @@ import { cos } from '../functions/cos';
 import { ePowerX } from '../functions/e-power-x';
 import { abs } from '../functions/abs';
 import { sqrt } from '../functions/sqrt';
+import {xPowerY} from "../functions/x_power_y";
 
 export class Calculator {
 
@@ -49,6 +50,10 @@ export class Calculator {
         // ePowerX custom function
         this.parser.set('ePower', (val) => {
             return ePowerX(val, this.rounds).toNumber();
+        });
+
+        this.parser.set('power', (x, y) =>{
+            return xPowerY(x, y).toNumber();
         });
 
         // Absolute value custom function
