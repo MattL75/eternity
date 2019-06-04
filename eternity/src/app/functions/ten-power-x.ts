@@ -4,6 +4,8 @@ import { ePowerX } from './e-power-x';
 import { abs } from './abs';
 import BigNumber from 'bignumber.js';
 
+const LN10 = 2.302585092994046; //e^(x*ln2*3.32...)
+
 export function tenPowerX(val: number): BigNumber {
     let intVal: number = floor(val);
     let remain: number = val - intVal;
