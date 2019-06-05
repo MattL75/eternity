@@ -3,8 +3,8 @@ import { factorial } from './factorial';
 import { PI } from './pi';
 import BigNumber from 'bignumber.js';
 
-export function cos(val: number, rounds: number = 40): BigNumber {
-    val = val * (PI / 180.0);
+export function cos(val: number, rounds: number = 40, mode: 'Deg' | 'Rad' = 'Deg'): BigNumber {
+    val = mode === 'Deg' ? val * (PI / 180.0) : val;
     let retained = new BigNumber(0);
     let nominator: BigNumber;
     let denominator: BigNumber;

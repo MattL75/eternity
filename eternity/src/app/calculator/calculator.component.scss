@@ -1,6 +1,7 @@
 :host {
     display: block;
-    transform: translateY(-96px);
+    transform: translateY(104px);
+    padding-bottom: 24px;
 }
 
 .et-main-card {
@@ -36,12 +37,25 @@
 .et-calculator {
 
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 12px;
+
+    .calculator-mode {
+        overflow: visible;
+        display: inline-block;
+        width: 31px;
+    }
+
+    .et-calculator-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 12px;
 
         tr td {
             border: 4px solid transparent;
@@ -74,6 +88,14 @@
     .larger {
         font-size: 1.4rem;
     }
+
+    .e-power-x-badge .mat-badge-content{
+        background-color: transparent;
+        color: var(--text-button);
+        right: -14px;
+        top: -8px;
+        transition: none;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -89,7 +111,7 @@
         }
     }
 
-    #symbols-table {
+    .symbols-table {
         margin-left: 4px;
     }
 }

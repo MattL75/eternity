@@ -11,57 +11,129 @@
                    [attr.aria-label]="'inputEquation' | translate:lang" />
         </span>
         <div class="et-calculator">
-            <table>
-                <tr>
-                    <td *ngFor="let number of [7, 8, 9]">
-                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
-                            {{number}}
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td *ngFor="let number of [4, 5, 6]">
-                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
-                            {{number}}
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td *ngFor="let number of [1, 2, 3]">
-                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
-                            {{number}}
-                        </button>
-                    </td>
-                </tr>
-            </table>
-            <table id="symbols-table">
-                <tr>
-                    <td *ngFor="let symbol of ['+', '-', '*']">
-                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(symbol)">
-                            {{symbol}}
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td *ngFor="let symbol of ['/', '(', ')']">
-                        <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(symbol)">
-                            {{symbol}}
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button mat-flat-button class="et-calculator-main-btn larger" (click)="pressButton('.')">
-                            .
-                        </button>
-                    </td>
-                    <td colspan="2">
-                        <button mat-flat-button class="et-calculator-main-btn equals-button" (click)="evaluate()">
-                            =
-                        </button>
-                    </td>
-                </tr>
-            </table>
+            <div class="et-calculator-group">
+                <table>
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn"
+                                    [attr.aria-label]="'switchAngleModeAria' | translate:lang"
+                                    (click)="switchMode()">
+                                <span class="calculator-mode">{{calculator.modeStr}}</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('0')">
+                                0
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('π')">
+                                π
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <table class="symbols-table">
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="equation = ''">
+                                C
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="removeLastCharacter()">
+                                <mat-icon>backspace</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="et-calculator-group">
+                <table>
+                    <tr>
+                        <td *ngFor="let number of [7, 8, 9]">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
+                                {{number}}
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let number of [4, 5, 6]">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
+                                {{number}}
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let number of [1, 2, 3]">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(number)">
+                                {{number}}
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <table class="symbols-table">
+                    <tr>
+                        <td *ngFor="let symbol of ['+', '-', '*']">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(symbol)">
+                                {{symbol}}
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let symbol of ['/', '(', ')']">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton(symbol)">
+                                {{symbol}}
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn larger" (click)="pressButton('.')">
+                                .
+                            </button>
+                        </td>
+                        <td colspan="2">
+                            <button mat-flat-button class="et-calculator-main-btn equals-button" (click)="evaluate()">
+                                =
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('ePower(')">
+                                <span class="e-power-x-badge" matBadge="x">e</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('sin(')">
+                                sin
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('cos(')">
+                                cos
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <table class="symbols-table">
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('sqrt(')">
+                                <b>&radic;</b>x
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('tenPower(')">
+                                <span class="e-power-x-badge" matBadge="x">10</span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </mat-card-content>
 </mat-card>
