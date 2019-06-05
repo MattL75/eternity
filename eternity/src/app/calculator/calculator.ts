@@ -7,7 +7,7 @@ import { sqrt } from '../functions/sqrt';
 import { floor } from '../functions/floor';
 import { tenPowerX } from '../functions/ten-power-x';
 import { PI } from '../functions/pi';
-import {xPowerY} from "../functions/x_power_y";
+import { xPowerY } from "../functions/x_power_y";
 
 export class Calculator {
 

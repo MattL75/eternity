@@ -1,5 +1,5 @@
 import BigNumber from 'bignumber.js';
-import {ePowerX} from "./e-power-x";
+import { ePowerX } from "./e-power-x";
 
 /*
 This function calculates x^y for x & y > 0 using the natural log (ln) series as follows:
