@@ -14,7 +14,7 @@ export function tenPowerX(val: number): BigNumber {
 
     if (intVal < 0) {
         intVal = abs(intVal);
-        retained = temp.dividedBy(power(10, intVal).multipliedBy(ePowerX(remain * LN10)));
+        retained = temp.dividedBy(power(10, intVal)).multipliedBy(ePowerX(remain * LN10));
     } else {
         retained = power(10, intVal).multipliedBy(ePowerX(remain * LN10));
     }
