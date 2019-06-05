@@ -67,7 +67,7 @@ export class Calculator {
 
         // xPowerY custom function
         this.parser.set('power', (x, y) =>{
-            return xPowerY(x, y, 100).toNumber();
+            return xPowerY(x, y, this.rounds).toNumber();
         });
 
         // Absolute value custom function
