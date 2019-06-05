@@ -100,6 +100,39 @@
                         </td>
                     </tr>
                 </table>
+                <table>
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('ePower(')">
+                                <span class="e-power-x-badge" matBadge="x">e</span>
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('sin(')">
+                                sin
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('cos(')">
+                                cos
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+                <table class="symbols-table">
+                    <tr>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('sqrt(')">
+                                <b>&radic;</b>x
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="pressButton('tenPower(')">
+                                <span class="e-power-x-badge" matBadge="x">10</span>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </mat-card-content>

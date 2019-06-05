@@ -87,6 +87,14 @@
     .larger {
         font-size: 1.4rem;
     }
+
+    .e-power-x-badge .mat-badge-content{
+        background-color: transparent;
+        color: var(--text-button);
+        right: -14px;
+        top: -8px;
+        transition: none;
+    }
 }
 
 @media only screen and (min-width: 992px) {

@@ -4,13 +4,14 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
+    MatBadgeModule,
     MatButtonModule, MatCardModule,
     MatGridListModule,
     MatIconModule,
     MatMenuModule, MatSnackBarModule,
     MatToolbarModule,
     MatTooltipModule
-} from "@angular/material";
+} from '@angular/material';
 import {L10nConfig, L10nLoader, LogLevel, ProviderType, StorageStrategy, TranslationModule} from "angular-l10n";
 import {HttpClientModule} from "@angular/common/http";
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -58,7 +59,8 @@ const l10nConfig: L10nConfig = {
         MatGridListModule,
         MatTooltipModule,
         MatCardModule,
-        MatSnackBarModule
+        MatSnackBarModule,
+        MatBadgeModule
     ],
     providers: [],
     bootstrap: [AppComponent]
