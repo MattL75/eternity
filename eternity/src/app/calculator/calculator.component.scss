@@ -36,12 +36,25 @@
 .et-calculator {
 
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 12px;
+
+    .calculator-mode {
+        overflow: visible;
+        display: inline-block;
+        width: 31px;
+    }
+
+    .et-calculator-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 12px;
 
         tr td {
             border: 4px solid transparent;
@@ -89,7 +102,7 @@
         }
     }
 
-    #symbols-table {
+    .symbols-table {
         margin-left: 4px;
     }
 }

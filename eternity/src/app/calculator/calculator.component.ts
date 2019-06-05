@@ -32,11 +32,25 @@ export class CalculatorComponent implements OnInit, OnDestroy {
     evaluate(): void {
         try {
             const result = this.calculator.evaluate(this.equation);
-            this.equation = '= ' + result;
+            this.equation = result + '';
         } catch (e) {
             this.snackbar.open('Invalid equation.', 'Dismiss', {
                 duration: 5000
             });
+        }
+    }
+
+    switchMode(): void {
+        if (this.calculator.modeStr === 'Deg') {
+            this.calculator.setMode('Rad');
+        } else {
+            this.calculator.setMode('Deg');
+        }
+    }
+
+    removeLastCharacter(): void {
+        if (this.equation && this.equation.length) {
+            this.equation = this.equation.slice(0, -1);
         }
     }
 
