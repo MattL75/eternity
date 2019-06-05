@@ -85,6 +85,7 @@
     padding-top: 56px;
     height: 144px;
     background-color: var(--primary);
+    position: absolute;
 }
 
 .et-main-content {
@@ -92,4 +93,5 @@
     align-items: flex-start;
     justify-content: center;
     flex-grow: 1;
+    overflow: auto;
 }
