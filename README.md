@@ -1,20 +1,20 @@
 # Eternity
 
-Eternity is a web application intended to emulate a scientific calculator. One requirement of the project is to use a language that is capable of performing complex scientific operations. ~~The course professor decided that was either Java or Python.~~ Javascript is fine.
+Eternity is a web application intended to emulate a scientific calculator capable of performing complex scientific operations.
+
+https://mattl75.github.io/eternity/
 
 ## Team
 
 * Mathieu Lajoie (40026331)
 * Olivier Hébert (40051654)
-* [add yourselves here]
+* Jason Brennan (27793928)
+* Charles-Antoine Guité (40063098)
+* Manel Guay-Montserrat (29692304)
 
-## Options
+## Programming Languages
 
-* Java/Kotlin
-    * Javalin
-    * Vertx
-    * Spring
-
-* Python
-    * Django
-    * Flask
+* Angular Framework
+    * HTML
+    * CSS
+    * TypeScript
