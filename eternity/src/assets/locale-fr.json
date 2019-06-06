@@ -1,1 +1,6 @@
-{}
+{
+  "themeSelection": "Choissiez un thème",
+  "languageSelection": "Choissisez une langue",
+  "scientificCalculator": "Calculatrice scientifique",
+  "inputEquation": "Données de l'équation"
+}

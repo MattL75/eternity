@@ -7,6 +7,7 @@ import { sqrt } from '../functions/sqrt';
 import { floor } from '../functions/floor';
 import { tenPowerX } from '../functions/ten-power-x';
 import { PI } from '../functions/pi';
+import { xPowerY } from "../functions/x_power_y";
 
 export class Calculator {
 
@@ -62,6 +63,11 @@ export class Calculator {
         // ePowerX custom function
         this.parser.set('ePower', (val) => {
             return ePowerX(val, this.rounds).toNumber();
+        });
+
+        // xPowerY custom function
+        this.parser.set('power', (x, y) =>{
+            return xPowerY(x, y, this.rounds).toNumber();
         });
 
         // Absolute value custom function

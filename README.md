@@ -12,7 +12,6 @@ https://mattl75.github.io/eternity/
 * Charles-Antoine Guité (40063098)
 * Manel Guay-Montserrat (29692304)
 
-
 ## Programming Languages
 
 * Angular Framework
