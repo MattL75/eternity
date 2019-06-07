@@ -7,7 +7,7 @@ import { sqrt } from '../functions/sqrt';
 import { floor } from '../functions/floor';
 import { tenPowerX } from '../functions/ten-power-x';
 import { PI } from '../functions/pi';
-import { xPowerY } from "../functions/x_power_y";
+import { xPowerY } from '../functions/x_power_y';
 
 export class Calculator {
 
@@ -31,8 +31,16 @@ export class Calculator {
         this.rounds = rounds;
     }
 
+    public getRounds(): number {
+        return this.rounds;
+    }
+
     public setPrecision(precision: number): void {
         this.precision = precision;
+    }
+
+    public getPrecision(): number {
+        return this.precision;
     }
 
     public setMode(mode: 'Deg' | 'Rad'): void {
@@ -66,7 +74,7 @@ export class Calculator {
         });
 
         // xPowerY custom function
-        this.parser.set('power', (x, y) =>{
+        this.parser.set('power', (x, y) => {
             return xPowerY(x, y, this.rounds).toNumber();
         });
 

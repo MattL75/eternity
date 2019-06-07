@@ -3,5 +3,16 @@
     "languageSelection": "Select a language",
     "scientificCalculator": "Scientific Calculator",
     "inputEquation": "Equation input",
-    "switchAngleModeAria": "Switch angle mode"
+    "switchAngleModeAria": "Switch angle mode",
+    "settings": "Settings",
+    "settingsPrecisionInput": "Decimal precision",
+    "settingsRoundsInput": "Calculation rounds",
+    "cancel": "Cancel",
+    "apply": "Apply",
+    "invalidEquation": "Invalid equation.",
+    "dismiss": "Dismiss",
+    "precisionSettingsError": "Precision must be between 0 and 6.",
+    "roundsSettingsError": "Rounds must be between 1 and 400.",
+    "settingsSuccess": "Settings changed.",
+    "success": "Success!"
 }

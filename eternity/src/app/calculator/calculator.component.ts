@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Language } from 'angular-l10n';
+import { Language, TranslationService } from 'angular-l10n';
 import { Calculator } from './calculator';
 import { MatSnackBar } from '@angular/material';
 
@@ -19,7 +19,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
 
     calculator: Calculator = new Calculator();
 
-    constructor(private snackbar: MatSnackBar) {}
+    constructor(private snackbar: MatSnackBar, public translation: TranslationService) {}
 
     ngOnInit() {}
 
@@ -34,7 +34,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
             const result = this.calculator.evaluate(this.equation);
             this.equation = result + '';
         } catch (e) {
-            this.snackbar.open('Invalid equation.', 'Dismiss', {
+            this.snackbar.open(this.translation.translate('invalidEquation'), this.translation.translate('dismiss'), {
                 duration: 5000
             });
         }

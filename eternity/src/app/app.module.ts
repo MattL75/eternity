@@ -5,9 +5,9 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
     MatBadgeModule,
-    MatButtonModule, MatCardModule,
+    MatButtonModule, MatCardModule, MatDialogModule,
     MatGridListModule,
-    MatIconModule,
+    MatIconModule, MatInputModule,
     MatMenuModule, MatSnackBarModule,
     MatToolbarModule,
     MatTooltipModule
@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { ThemePipe } from './pipes/theme.pipe';
+import { SettingsComponent } from './settings/settings.component';
 
 const l10nConfig: L10nConfig = {
     logger: {
@@ -44,7 +45,8 @@ const l10nConfig: L10nConfig = {
     declarations: [
         AppComponent,
         CalculatorComponent,
-        ThemePipe
+        ThemePipe,
+        SettingsComponent
     ],
     imports: [
         BrowserModule,
@@ -60,9 +62,13 @@ const l10nConfig: L10nConfig = {
         MatTooltipModule,
         MatCardModule,
         MatSnackBarModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatDialogModule,
+        MatInputModule
+
     ],
     providers: [],
+    entryComponents: [SettingsComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {

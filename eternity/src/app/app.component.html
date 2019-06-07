@@ -3,6 +3,8 @@
         Eternity
     </div>
     <div>
+
+        <!-- Theme selection button -->
         <button mat-icon-button
                 [matTooltip]="'themeSelection' | translate:lang"
                 [matMenuTriggerFor]="themeMenu"
@@ -26,10 +28,12 @@
                 </mat-grid-tile>
             </mat-grid-list>
         </mat-menu>
+
+        <!-- Language selection button -->
         <button mat-icon-button
                 [matTooltip]="'languageSelection' | translate:lang"
                 [matMenuTriggerFor]="langMenu"
-                [attr.aria-label]="'themeSelection' | translate:lang">
+                [attr.aria-label]="'languageSelection' | translate:lang">
             <mat-icon>language</mat-icon>
         </button>
         <mat-menu #langMenu="matMenu" [class]="activeTheme">
@@ -40,9 +44,19 @@
                 </button>
             </ng-container>
         </mat-menu>
+
+        <!-- Settings button -->
+        <button mat-icon-button
+                [matTooltip]="'settings' | translate:lang"
+                [attr.aria-label]="'settings' | translate:lang"
+                (click)="openSettingsDialog(calculator)">
+            <mat-icon>settings</mat-icon>
+        </button>
     </div>
 </mat-toolbar>
+
+<!-- Main Content -->
 <div class="et-decorative-bar"></div>
 <div class="et-main-content">
-    <et-calculator></et-calculator>
+    <et-calculator #calculator></et-calculator>
 </div>

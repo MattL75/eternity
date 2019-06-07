@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{'settings' | translate:lang}}</h2>
+<div mat-dialog-content>
+    <mat-form-field class="settings-form-field">
+        <input matInput #roundsInput type="number" max="400" min="1"
+               [placeholder]="'settingsRoundsInput' | translate:lang"
+               [value]="data.calculator.getRounds().toLocaleString()"
+               [attr.aria-label]="'settingsRoundsInput' | translate:lang" />
+    </mat-form-field>
+    <mat-form-field class="settings-form-field">
+        <input matInput #precisionInput type="number" max="7" min="0"
+               [placeholder]="'settingsPrecisionInput' | translate:lang"
+               [value]="data.calculator.getPrecision().toLocaleString()"
+               [attr.aria-label]="'settingsPrecisionInput' | translate:lang" />
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="settings-dialog-actions">
+    <button mat-button mat-dialog-close>{{'cancel' | translate:lang}}</button>
+    <button mat-button (click)="applyNewProperties(roundsInput.value, precisionInput.value)">
+        {{'apply' | translate:lang}}
+    </button>
+</div>
