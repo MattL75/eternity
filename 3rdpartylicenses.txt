@@ -89,6 +89,10 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/dialog
+
+@angular/material/form-field
+
 @angular/material/grid-list
 
 @angular/material/icon
