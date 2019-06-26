@@ -15,18 +15,12 @@ https://mattl75.github.io/eternity/
 ## Repository Structure
 
 Our repository contains three main directories that have clear, defined and different purposes.
-
-* Eternity
-
-    Contains the application. Includes the source code, guides to running the app, etc.
-
-* Documentation
-
-    Contains the automatically generated documentation files.
     
-* Deliverables
-
-    Contains the reports, slides and other documents that were submitted for grading.
+| Directory | Description |
+| --------- | ----------- |
+| Eternity       | Contains the application. Includes the source code, guides to running the app, etc.
+| Documentation  | Contains the automatically generated documentation files.
+| Deliverables   | Contains the reports, slides and other documents that were submitted for grading.
 
 ## Programming Languages
 
