@@ -45,6 +45,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
     openSettingsDialog(calculator: CalculatorComponent): void {
         this.dialog.open(SettingsComponent, {
+            panelClass: this.activeTheme,
             data: calculator
         });
     }

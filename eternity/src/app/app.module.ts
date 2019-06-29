@@ -18,6 +18,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { ThemePipe } from './pipes/theme.pipe';
 import { SettingsComponent } from './settings/settings.component';
+import { LogoComponent } from './logo/logo.component';
 
 const l10nConfig: L10nConfig = {
     logger: {
@@ -46,7 +47,8 @@ const l10nConfig: L10nConfig = {
         AppComponent,
         CalculatorComponent,
         ThemePipe,
-        SettingsComponent
+        SettingsComponent,
+        LogoComponent
     ],
     imports: [
         BrowserModule,
