@@ -90,7 +90,7 @@ export class Calculator {
 
         // tenPowerX custom function
         this.parser.set('tenPower', (val) => {
-            return tenPowerX(val);
+            return tenPowerX(val).toNumber();
         });
 
         // Custom PI symbol
