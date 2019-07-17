@@ -6,8 +6,10 @@
         "start": "ng serve",
         "build": "ng build",
         "lint": "ng lint",
-        "deploy": "ng build --prod --base-href=\"/eternity/\" && npx ngh --dir dist/eternity",
-        "compodoc": "npx compodoc -p src/tsconfig.app.json -n Eternity --output ../documentation --hideGenerator"
+        "deploy": "npm run compodoc && ng build --prod --base-href=\"/eternity/\" && npx ngh --dir dist/eternity",
+        "compodoc": "npm run compodoc-dev && npm run compodoc-prod",
+        "compodoc-dev": "npx compodoc -p src/tsconfig.app.json -n Eternity --output ../documentation --hideGenerator",
+        "compodoc-prod": "npx compodoc -p src/tsconfig.app.json -n Eternity --output ./src/assets/documentation --hideGenerator "
     },
     "private": true,
     "dependencies": {

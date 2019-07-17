@@ -1,6 +1,16 @@
-# Eternity
+# Eternity [![Netlify Status](https://api.netlify.com/api/v1/badges/a41bafa7-adbc-4e4d-98ed-aef9ebf0de13/deploy-status)](https://app.netlify.com/sites/eternity-calculator/deploys)
+
+Eternity is a web application intended to emulate a scientific calculator capable of performing complex scientific operations. View a [live version](https://mattl75.github.io/eternity/) or consult the [documentation site](https://mattl75.github.io/eternity/assets/documentation/index.html).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+
+## Team
+
+* Mathieu Lajoie (40026331)
+* Olivier Hébert (40051654)
+* Jason Brennan (27793928)
+* Charles-Antoine Guité (40063098)
+* Manel Guay-Montserrat (29692304)
 
 ## Getting Started
 
