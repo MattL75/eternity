@@ -1,0 +1,1110 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Eternity</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Eternity</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>AppComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/app.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The main bootstrapped component of the eternity scientific calculator.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>et-root</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./app.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./app.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#availableLangs">availableLangs</a>
+                            </li>
+                            <li>
+                                <a href="#availableThemes">availableThemes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                <a href="#lang">lang</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#locale">locale</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#openSettingsDialog">openSettingsDialog</a>
+                            </li>
+                            <li>
+                                <a href="#selectLanguage">selectLanguage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(locale: LocaleService, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/app.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for the main component. Should never be invoked manually.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locale</td>
+                                                  
+                                                        <td>
+                                                                    <code>LocaleService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Locale service, injected.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Injected dialog service.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <span class="name">
+                            <b>
+                            class</b>
+                            <a href="#class"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;material-light&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/app.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The currently active theme. Controls the values of the css custom properties. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/app.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The destroy sequence defined for the main component. Should never be invoked manually. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/app.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialization method for the main component. Should never be invoked manually. </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openSettingsDialog"></a>
+                    <span class="name">
+                        <b>
+                            openSettingsDialog
+                        </b>
+                        <a href="#openSettingsDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openSettingsDialog(calculator: <a href="../classes/Calculator.html">CalculatorComponent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/app.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function that opens the settings dialog.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>calculator</td>
+                                    <td>
+                                                <code><a href="../classes/Calculator.html" target="_self" >CalculatorComponent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The calculator component instance to use for the settings.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectLanguage"></a>
+                    <span class="name">
+                        <b>
+                            selectLanguage
+                        </b>
+                        <a href="#selectLanguage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectLanguage(language: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/app.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Function that sets a new language and translates the application.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>language</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The language to select.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="availableLangs"></a>
+                        <span class="name">
+                            <b>
+                            availableLangs</b>
+                            <a href="#availableLangs"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>LANGS</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/app.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A list of the available languages. Defined in the app.component.ts file as a const. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="availableThemes"></a>
+                        <span class="name">
+                            <b>
+                            availableThemes</b>
+                            <a href="#availableThemes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>THEMES</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/app.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A list of the available themes. Defined in the app.component.ts file as a const. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/app.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Injected dialog service.</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lang"></a>
+                        <span class="name">
+                            <b>
+                            lang</b>
+                            <a href="#lang"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Language()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/app.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The currently active language. Used for internationalization. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locale"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            locale</b>
+                            <a href="#locale"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>LocaleService</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/app.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Locale service, injected.</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostBinding, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { Language, LocaleService } from &#x27;angular-l10n&#x27;;
+import { MatDialog } from &#x27;@angular/material&#x27;;
+import { CalculatorComponent } from &#x27;./calculator/calculator.component&#x27;;
+import { SettingsComponent } from &#x27;./settings/settings.component&#x27;;
+
+/** Constant list of themes for the application. */
+const THEMES: string[] &#x3D; [
+    &#x27;material-light&#x27;,
+    &#x27;material-dark&#x27;,
+    &#x27;high-contrast&#x27;,
+    &#x27;beach-day&#x27;
+];
+
+/** Constant list of languages for the application. */
+const LANGS: any[] &#x3D; [
+    {short: &#x27;en&#x27;, long: &#x27;English&#x27;},
+    {short: &#x27;fr&#x27;, long: &#x27;Français&#x27;}
+];
+
+/**
+ * The main bootstrapped component of the eternity scientific calculator.
+ */
+@Component({
+    selector: &#x27;et-root&#x27;,
+    templateUrl: &#x27;./app.component.html&#x27;,
+    styleUrls: [&#x27;./app.component.scss&#x27;]
+})
+export class AppComponent implements OnInit, OnDestroy {
+
+    /** The currently active language. Used for internationalization. */
+    @Language()
+    lang: string;
+
+    /** The currently active theme. Controls the values of the css custom properties. */
+    @HostBinding(&#x27;class&#x27;)
+    activeTheme: string &#x3D; &#x27;material-light&#x27;;
+
+    /** A list of the available themes. Defined in the app.component.ts file as a const. */
+    availableThemes: string[] &#x3D; THEMES;
+
+    /** A list of the available languages. Defined in the app.component.ts file as a const. */
+    availableLangs: any[] &#x3D; LANGS;
+
+    /**
+     * Constructor for the main component. Should never be invoked manually.
+     * @param locale Locale service, injected.
+     * @param dialog Injected dialog service.
+     */
+    constructor(public locale: LocaleService, public dialog: MatDialog) {}
+
+    /** Initialization method for the main component. Should never be invoked manually. */
+    ngOnInit(): void {}
+
+    /** The destroy sequence defined for the main component. Should never be invoked manually. */
+    ngOnDestroy(): void {}
+
+    /**
+     * Function that sets a new language and translates the application.
+     * @param language The language to select.
+     */
+    selectLanguage(language: string): void {
+        this.locale.setCurrentLanguage(language);
+    }
+
+    /**
+     * Function that opens the settings dialog.
+     * @param calculator The calculator component instance to use for the settings.
+     */
+    openSettingsDialog(calculator: CalculatorComponent): void {
+        this.dialog.open(SettingsComponent, {
+            panelClass: this.activeTheme,
+            data: calculator
+        });
+    }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar class&#x3D;&quot;et-toolbar&quot;&gt;
+    &lt;div class&#x3D;&quot;eternity-logo-container&quot;&gt;
+        &lt;et-logo&gt;&lt;/et-logo&gt;
+        &lt;div&gt;Eternity&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- Theme selection button --&gt;
+        &lt;button mat-icon-button
+                [matTooltip]&#x3D;&quot;&#x27;themeSelection&#x27; | translate:lang&quot;
+                [matMenuTriggerFor]&#x3D;&quot;themeMenu&quot;
+                [attr.aria-label]&#x3D;&quot;&#x27;themeSelection&#x27; | translate:lang&quot;&gt;
+            &lt;mat-icon&gt;format_color_fill&lt;/mat-icon&gt;
+        &lt;/button&gt;
+        &lt;mat-menu #themeMenu&#x3D;&quot;matMenu&quot; [class]&#x3D;&quot;activeTheme&quot;&gt;
+            &lt;mat-grid-list cols&#x3D;&quot;2&quot;&gt;
+                &lt;mat-grid-tile *ngFor&#x3D;&quot;let theme of availableThemes&quot;
+                               [class]&#x3D;&quot;theme&quot;
+                               style&#x3D;&quot;position: absolute&quot;&gt;
+                    &lt;div mat-menu-item class&#x3D;&quot;menu-item&quot; [matTooltip]&#x3D;&quot;theme | theme&quot;&gt;
+                        &lt;div class&#x3D;&quot;menu-item-container&quot;&gt;
+                            &lt;div role&#x3D;&quot;button&quot; [attr.aria-label]&#x3D;&quot;theme&quot;
+                                    class&#x3D;&quot;menu-item-btn&quot; (click)&#x3D;&quot;activeTheme &#x3D; theme&quot;&gt;
+                                &lt;mat-icon *ngIf&#x3D;&quot;activeTheme &#x3D;&#x3D;&#x3D; theme&quot;
+                                          class&#x3D;&quot;menu-item-btn-check&quot;&gt;check&lt;/mat-icon&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/mat-grid-tile&gt;
+            &lt;/mat-grid-list&gt;
+        &lt;/mat-menu&gt;
+
+        &lt;!-- Language selection button --&gt;
+        &lt;button mat-icon-button
+                [matTooltip]&#x3D;&quot;&#x27;languageSelection&#x27; | translate:lang&quot;
+                [matMenuTriggerFor]&#x3D;&quot;langMenu&quot;
+                [attr.aria-label]&#x3D;&quot;&#x27;languageSelection&#x27; | translate:lang&quot;&gt;
+            &lt;mat-icon&gt;language&lt;/mat-icon&gt;
+        &lt;/button&gt;
+        &lt;mat-menu #langMenu&#x3D;&quot;matMenu&quot; [class]&#x3D;&quot;activeTheme&quot;&gt;
+            &lt;ng-container *ngFor&#x3D;&quot;let localLang of availableLangs&quot;&gt;
+                &lt;button mat-menu-item *ngIf&#x3D;&quot;localLang.short !&#x3D;&#x3D; lang&quot;
+                        (click)&#x3D;&quot;selectLanguage(localLang.short)&quot;&gt;
+                    {{localLang.long}}
+                &lt;/button&gt;
+            &lt;/ng-container&gt;
+        &lt;/mat-menu&gt;
+
+        &lt;!-- Settings button --&gt;
+        &lt;button mat-icon-button
+                [matTooltip]&#x3D;&quot;&#x27;settings&#x27; | translate:lang&quot;
+                [attr.aria-label]&#x3D;&quot;&#x27;settings&#x27; | translate:lang&quot;
+                (click)&#x3D;&quot;openSettingsDialog(calculator)&quot;&gt;
+            &lt;mat-icon&gt;settings&lt;/mat-icon&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/mat-toolbar&gt;
+
+&lt;!-- Main Content --&gt;
+&lt;div class&#x3D;&quot;et-decorative-bar&quot;&gt;&lt;/div&gt;
+&lt;div class&#x3D;&quot;et-main-content&quot;&gt;
+    &lt;et-calculator #calculator&gt;&lt;/et-calculator&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./app.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--background);
+    color: var(--text-main);
+}
+
+.et-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 56px;
+    color: var(--text-primary);
+    background-color: var(--primary);
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        margin-left: 12px;
+    }
+
+    .eternity-logo-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.menu-item {
+    flex: 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+
+    &amp;-container {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        margin: 6px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &amp;-btn {
+        background-color: var(--primary);
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &amp;-check {
+            position: absolute;
+            margin-right: 0 !important;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            padding: 2px;
+            background-color: var(--menu-bg);
+            color: var(--text-main);
+        }
+    }
+}
+
+/deep/ .mat-figure {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.et-decorative-bar {
+    width: 100%;
+    padding-top: 56px;
+    height: 144px;
+    background-color: var(--primary);
+    position: absolute;
+}
+
+.et-main-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: auto;
+    background-color: var(--background);
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="et-toolbar">    <div class="eternity-logo-container">        <et-logo></et-logo>        <div>Eternity</div>    </div>    <div>        <!-- Theme selection button -->        <button mat-icon-button                [matTooltip]="\'themeSelection\' | translate:lang"                [matMenuTriggerFor]="themeMenu"                [attr.aria-label]="\'themeSelection\' | translate:lang">            <mat-icon>format_color_fill</mat-icon>        </button>        <mat-menu #themeMenu="matMenu" [class]="activeTheme">            <mat-grid-list cols="2">                <mat-grid-tile *ngFor="let theme of availableThemes"                               [class]="theme"                               style="position: absolute">                    <div mat-menu-item class="menu-item" [matTooltip]="theme | theme">                        <div class="menu-item-container">                            <div role="button" [attr.aria-label]="theme"                                    class="menu-item-btn" (click)="activeTheme = theme">                                <mat-icon *ngIf="activeTheme === theme"                                          class="menu-item-btn-check">check</mat-icon>                            </div>                        </div>                    </div>                </mat-grid-tile>            </mat-grid-list>        </mat-menu>        <!-- Language selection button -->        <button mat-icon-button                [matTooltip]="\'languageSelection\' | translate:lang"                [matMenuTriggerFor]="langMenu"                [attr.aria-label]="\'languageSelection\' | translate:lang">            <mat-icon>language</mat-icon>        </button>        <mat-menu #langMenu="matMenu" [class]="activeTheme">            <ng-container *ngFor="let localLang of availableLangs">                <button mat-menu-item *ngIf="localLang.short !== lang"                        (click)="selectLanguage(localLang.short)">                    {{localLang.long}}                </button>            </ng-container>        </mat-menu>        <!-- Settings button -->        <button mat-icon-button                [matTooltip]="\'settings\' | translate:lang"                [attr.aria-label]="\'settings\' | translate:lang"                (click)="openSettingsDialog(calculator)">            <mat-icon>settings</mat-icon>        </button>    </div></mat-toolbar><!-- Main Content --><div class="et-decorative-bar"></div><div class="et-main-content">    <et-calculator #calculator></et-calculator></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'et-root'},{'name': 'CalculatorComponent', 'selector': 'et-calculator'},{'name': 'LogoComponent', 'selector': 'et-logo'},{'name': 'SettingsComponent', 'selector': 'et-settings'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
