@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
 import { ThemePipe } from './pipes/theme.pipe';
 import { SettingsComponent } from './settings/settings.component';
 import { LogoComponent } from './logo/logo.component';
-import { DocumentationComponent } from './documentation/documentation.component';
 
 /** Configuration constant for the l10n plugin. */
 const l10nConfig: L10nConfig = {
