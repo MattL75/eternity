@@ -1,3 +1,7 @@
+/**
+ * Floor function, brings the passed value down to its closest lower integer.
+ * @param val The value to evaluate.
+ */
 export function floor(val: number): number {
     let i: number = 1;
     let prev: number = 1;

@@ -3,6 +3,12 @@ import { factorial } from './factorial';
 import BigNumber from 'bignumber.js';
 import { PI } from './pi';
 
+/**
+ * Function to calculate the sin of a value.
+ * @param val The value to evaluate as part of the function.
+ * @param rounds Number of rounds to execute for the infinite series.
+ * @param mode Whether to evaluate as a rad or deg.
+ */
 export function sin(val: number, rounds: number = 40, mode: 'Deg' | 'Rad' = 'Deg'): BigNumber {
     val = mode === 'Deg' ? val * (PI / 180.0) : val;
     let retained = new BigNumber(0);

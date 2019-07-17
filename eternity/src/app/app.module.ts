@@ -20,6 +20,7 @@ import { ThemePipe } from './pipes/theme.pipe';
 import { SettingsComponent } from './settings/settings.component';
 import { LogoComponent } from './logo/logo.component';
 
+/** Configuration constant for the l10n plugin. */
 const l10nConfig: L10nConfig = {
     logger: {
         level: LogLevel.Warn
@@ -42,6 +43,9 @@ const l10nConfig: L10nConfig = {
     }
 };
 
+/**
+ * Main module declaration of the application.
+ */
 @NgModule({
     declarations: [
         AppComponent,
@@ -74,6 +78,8 @@ const l10nConfig: L10nConfig = {
     bootstrap: [AppComponent]
 })
 export class AppModule {
+
+    /** Constructor for the main module. Should never be invoked directly. */
     constructor(public l10nLoader: L10nLoader) {
         this.l10nLoader.load();
     }
