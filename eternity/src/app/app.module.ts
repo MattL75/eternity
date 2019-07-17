@@ -52,8 +52,7 @@ const l10nConfig: L10nConfig = {
         CalculatorComponent,
         ThemePipe,
         SettingsComponent,
-        LogoComponent,
-        DocumentationComponent
+        LogoComponent
     ],
     imports: [
         BrowserModule,
