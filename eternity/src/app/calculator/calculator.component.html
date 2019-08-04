@@ -41,7 +41,7 @@
                             </button>
                         </td>
                         <td>
-                            <button mat-flat-button class="et-calculator-main-btn" (click)="removeLastCharacter()">
+                            <button mat-flat-button class="et-calculator-main-btn" (click)="removeLastCharacter()" [attr.aria-label]="'backSpaceAria' | translate:lang">
                                 <mat-icon>backspace</mat-icon>
                             </button>
                         </td>
