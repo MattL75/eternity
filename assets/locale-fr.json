@@ -3,6 +3,7 @@
     "languageSelection": "Choissisez une langue",
     "scientificCalculator": "Calculatrice scientifique",
     "inputEquation": "Données de l'équation",
+    "switchAngleModeAria": "Changer le mode d'angle",
     "settings": "Réglages",
     "settingsPrecisionInput": "Précision décimale",
     "settingsRoundsInput": "Tours de calcul",
@@ -13,5 +14,6 @@
     "precisionSettingsError": "La précision doit être comprise entre 0 et 6.",
     "roundsSettingsError": "Les tours doivent être compris entre 1 et 400.",
     "settingsSuccess": "Paramètres modifiés.",
-    "success": "Succès!"
+    "success": "Succès!",
+    "backSpaceAria": "Effacer"
 }

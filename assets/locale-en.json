@@ -14,5 +14,6 @@
     "precisionSettingsError": "Precision must be between 0 and 6.",
     "roundsSettingsError": "Rounds must be between 1 and 400.",
     "settingsSuccess": "Settings changed.",
-    "success": "Success!"
+    "success": "Success!",
+    "backSpaceAria": "Backspace",
 }
