@@ -1,8 +1,9 @@
-import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { Language, LocaleService } from 'angular-l10n';
 import { MatDialog } from '@angular/material';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { SettingsComponent } from './settings/settings.component';
+import { Meta } from '@angular/platform-browser';
 
 /** Constant list of themes for the application. */
 const THEMES: string[] = [
@@ -26,7 +27,7 @@ const LANGS: any[] = [
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
 
     /** The currently active language. Used for internationalization. */
     @Language()
@@ -46,11 +47,20 @@ export class AppComponent implements OnInit, OnDestroy {
      * Constructor for the main component. Should never be invoked manually.
      * @param locale Locale service, injected.
      * @param dialog Injected dialog service.
+     * @param meta Service used to update page meta information.
+     * @param elRef Reference to the component element.
      */
-    constructor(public locale: LocaleService, public dialog: MatDialog) {}
+    constructor(public locale: LocaleService,
+                public dialog: MatDialog,
+                public meta: Meta,
+                private elRef: ElementRef) {}
 
     /** Initialization method for the main component. Should never be invoked manually. */
     ngOnInit(): void {}
+
+    ngAfterViewInit(): void {
+        this.initMetaColorTag();
+    }
 
     /** The destroy sequence defined for the main component. Should never be invoked manually. */
     ngOnDestroy(): void {}
@@ -64,6 +74,17 @@ export class AppComponent implements OnInit, OnDestroy {
     }
 
     /**
+     * Updates the active theme and the meta tag for chrome mobile.
+     * @param theme Theme to select.
+     */
+    changeTheme(theme: string): void {
+        this.activeTheme = theme;
+        setTimeout(() => {
+            this.setMetaThemeColor();
+        });
+    }
+
+    /**
      * Function that opens the settings dialog.
      * @param calculator The calculator component instance to use for the settings.
      */
@@ -72,6 +93,24 @@ export class AppComponent implements OnInit, OnDestroy {
             panelClass: this.activeTheme,
             data: calculator
         });
+    }
+
+    /**
+     * Initializes the meta theme-color tag.
+     */
+    private initMetaColorTag(): void {
+        let styles = getComputedStyle(this.elRef.nativeElement);
+        let colorValue = styles.getPropertyValue('--primary');
+        this.meta.addTag({name: 'theme-color', content: colorValue.trim()});
+    }
+
+    /**
+     * Updates the meta theme-color tag.
+     */
+    private setMetaThemeColor(): void {
+        let styles = getComputedStyle(this.elRef.nativeElement);
+        let colorValue = styles.getPropertyValue('--primary');
+        this.meta.updateTag({name: 'theme-color', content: colorValue.trim()});
     }
 
 }
