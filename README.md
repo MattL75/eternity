@@ -1,8 +1,6 @@
 # Eternity [![Netlify Status](https://api.netlify.com/api/v1/badges/a41bafa7-adbc-4e4d-98ed-aef9ebf0de13/deploy-status)](https://app.netlify.com/sites/eternity-calculator/deploys)
 
-Eternity is a web application intended to emulate a scientific calculator capable of performing complex scientific operations.
-
-https://mattl75.github.io/eternity/
+Eternity is a web application intended to emulate a scientific calculator capable of performing complex scientific operations. View a [live version](https://mattl75.github.io/eternity/) or consult the [documentation site](https://mattl75.github.io/eternity/assets/documentation/index.html).
 
 ## Team
 
